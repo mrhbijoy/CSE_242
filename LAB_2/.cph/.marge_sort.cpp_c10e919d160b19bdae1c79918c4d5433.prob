@@ -1,0 +1,1 @@
+{"name":"Local: marge_sort","url":"/workspaces/CSE_242/LAB_2/marge_sort.cpp","tests":[{"id":1705834138647,"input":"5\n8 9 23 54 7","output":"After Marge Sort:\n7 8 9 23 54"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/CSE_242/LAB_2/marge_sort.cpp","group":"local","local":true}
