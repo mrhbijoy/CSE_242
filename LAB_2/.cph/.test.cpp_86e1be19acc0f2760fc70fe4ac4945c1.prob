@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"/workspaces/CSE_242/LAB_2/test.cpp","tests":[{"id":1705837229185,"input":"5\n1 1 3 4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/CSE_242/LAB_2/test.cpp","group":"local","local":true}
