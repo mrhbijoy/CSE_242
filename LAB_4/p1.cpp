@@ -48,12 +48,18 @@ int main()
         if (n == -1)
         {
             my_sort(arr, arr + i);
-            if (i % 2 == 0)
+            if (i % 2 == 0){
                 cout << arr[i / 2 - 1] << " ";
-            else
-                cout << arr[i / 2] << " ";
-            for (int j = i / 2; j < i - 1; j++)
+                for (int j = i / 2-1; j < i - 1; j++)
                 arr[j] = arr[j + 1];
+
+            }
+            else {
+                cout << arr[i / 2] << " ";
+                for (int j = i / 2; j < i - 1; j++)
+                arr[j] = arr[j + 1];
+                }
+            
             i--;
         }
         else
