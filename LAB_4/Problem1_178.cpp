@@ -15,20 +15,6 @@ int arr[1000000];
         }
     }
 }
-void my_sort_2(int *arr, int *arr_end){
-    
-    int n = arr_end - arr;
-    for (int i = 1; i < n; i++)
-    {
-        int temp = arr[i];
-        int j;
-        for (j = i; j > 0 && arr[j - 1] > temp; j--)
-            arr[j] = arr[j - 1];
-        arr[j] = temp;
-
-    }
-
-}
 
 int main()
 {
@@ -38,9 +24,6 @@ int main()
     {
         cin >> n;
         if (n == 0){
-            for (int j = 0; j < i; j++)
-                cout << arr[j] << " ";
-            cout << endl;
             return 0;
             
         }
