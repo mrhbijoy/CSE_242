@@ -71,21 +71,18 @@ int main() {
     cout << prims(cities) << endl;
     return 0;
 }
-/*Report on the Implementation of Prim's and Kruskal's Algorithms
+/*Rationale for Choosing Prim's or Kruskal's Algorithm
 
-The provided code is an implementation of Prim's and Kruskal's algorithms in C++. Both are minimum-spanning-tree algorithms used in graph theory. Prim's algorithm builds the spanning tree by adding the smallest edge that connects a node in the tree to a node outside the tree, while Kruskal's algorithm adds the smallest edge not in the tree that does not form a cycle.
-Code Explanation
+Both Prim's and Kruskal's algorithms are used to find the minimum spanning tree in a graph. The choice between the two depends on the specific characteristics of the problem and the graph.
 
-    Data Structures Used: The code uses a vector of strings to store the city names. For Prim's algorithm, an adjacency matrix is used to represent the graph, and an array is used to keep track of selected nodes. For Kruskal's algorithm, a vector of pairs is used to store the edges and their costs, and a disjoint-set data structure is used to keep track of the connected components.
+    Prim's Algorithm: This algorithm is efficient when dealing with dense graphs, where the number of edges is significantly larger than the number of vertices. Prim's algorithm adds the smallest edge that connects a node in the tree to a node outside the tree, making it a good choice when the graph is already connected.
 
-    Input Reading: The code first reads the number of cities and the names of the cities. Then it reads the number of connections and the details of each connection. The details of each connection include the names of the two cities and the cost of the connection. The find function from the STL is used to find the indices of the cities in the cities vector. These indices are then used to update the adjacency matrix for Prim's algorithm and to create the edges for Kruskal's algorithm.
+    Kruskal's Algorithm: This algorithm is efficient when dealing with sparse graphs, where the number of edges is close to the number of vertices. Kruskal's algorithm adds the smallest edge not in the tree that does not form a cycle, making it a good choice when the graph is disconnected.
 
-    Prim's Algorithm: The prims function is the implementation of Prim's algorithm. It starts by selecting the first city. Then it enters a loop that continues until all cities have been selected. In each iteration of the loop, it finds the smallest edge connecting a selected city to an unselected city, adds the cost of this edge to the total cost, and selects the unselected city.
+Time Complexity Analysis
 
-    Kruskal's Algorithm: The kruskal function is the implementation of Kruskal's algorithm. It first sorts the edges by cost. Then it iterates over the edges and for each edge, if the cities are not in the same set, it adds the cost to min_cost and merges the sets. The find function is used to find the parent of a city in the disjoint set, and the union_set function is used to merge two sets.
+    Prim's Algorithm: The time complexity of Prim's algorithm is O(V^2) for an adjacency matrix representation of the graph, where V is the number of vertices. If a binary heap and adjacency list representation is used, the time complexity can be reduced to O(E log V), where E is the number of edges.
 
-    Output: Both functions print the cost and the cities connected by each selected edge, and return the minimum cost.
+    Kruskal's Algorithm: The time complexity of Kruskal's algorithm is O(E log E) or O(E log V), as sorting of edges is the most expensive operation. Here, E is the number of edges and V is the number of vertices.
 
-Conclusion
-
-These implementations of Prim's and Kruskal's algorithms efficiently find the minimum spanning tree of a graph. They use different approaches to achieve the same goal, and the choice between them depends on the specific requirements of the problem.*/
+In conclusion, the choice between Prim's and Kruskal's algorithm depends on the specific characteristics of the graph and the problem. If the graph is dense, Prim's algorithm may be more efficient, while if the graph is sparse, Kruskal's algorithm may be more efficient.*/
